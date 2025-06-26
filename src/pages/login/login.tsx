@@ -1,7 +1,7 @@
 import type React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Box, Button, Container } from "./styles";
-import { type RootState, type AppDispatch } from "../../app/store";
+import { type AppDispatch } from "../../app/store";
 import { useNavigate } from "react-router-dom";
 import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,7 +18,6 @@ const SignInFormValidationSchema = zod.object({
 type SignInFormType = zod.infer<typeof SignInFormValidationSchema>;
 
 export const Login: React.FC = () => {
-  const loading = useSelector((state: RootState) => state.auth.loading);
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
 

@@ -1,5 +1,5 @@
 export const environment = {
-  BASE_URL: "http://localhost:3333",
+  BASE_URL: "http://192.168.0.56:3333",
 
   APP_NAME: "TEST",
 
