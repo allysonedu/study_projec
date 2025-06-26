@@ -4,6 +4,7 @@ interface IUsersRegisterProps {
   name: string;
   email: string;
   password: string;
+  
 }
 
 const _login = async (email: string, password: string) => {
